@@ -4,8 +4,8 @@
   "description": "get random star wars name",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/index.test.js -w",
-    "test:single": "mocha src/index.test.js",
+    "test": "mocha src/index.test.js --compilers js:babel-register",
+    "test:single": "istanbul cover -x *.test.js _mocha --  -R spec src/index.test.js",
     "semantic-release": "semantic-release"
   },
   "repository": {
@@ -29,6 +29,7 @@
   "devDependencies": {
     "chai": "4.2.0",
     "ghooks": "2.0.4",
+    "istanbul": "0.4.5",
     "mocha": "6.2.0",
     "semantic-release": "^15.13.24"
   },
