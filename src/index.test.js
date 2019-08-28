@@ -13,7 +13,7 @@ describe('starwars-names', function() {
             }
         })
         it('should contain chris', () => {
-            expect(starwars.all).to.include('Chirs(test)')
+            expect(starwars.all).to.include('Chris(test)')
         })
     });
     describe('random', () => {

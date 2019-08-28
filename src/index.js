@@ -1,5 +1,5 @@
-import uniqueRandomArray from 'unique-random-array';
-import starWarsNames from './starwars-names.json';
+var uniqueRandomArray = require('unique-random-array');
+var starWarsNames = require('./starwars-names.json');
 
 const getRandomItem = uniqueRandomArray(starWarsNames);
 
@@ -13,7 +13,7 @@ function random(number) {
     return getRandomItem();
   } else {
     const randomItems = [];
-    for (var i = 1; i < number; i++) {
+    for (let i = 0; i < number; i++) {
       randomItems.push(getRandomItem());
     }
     return randomItems;
